@@ -1,0 +1,220 @@
+/* General */
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Karla', sans-serif;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+.overbox .attribution
+{
+    display: none
+}
+
+h1
+{
+    font-size: 25px;
+    font-weight: 700;
+    color: hsl(179, 62%, 43%);
+}
+
+/* BODY and OVERBOX */
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.overbox
+{
+    display: grid;
+    grid-template-areas: "top top"
+                         "left right";
+    grid-template-rows: 23fr 28fr;
+    grid-template-columns: 1fr 1fr;
+    width: 660px;
+    height: 470px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+p
+{
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+h2
+{
+    font-size: 17px;
+}
+
+/* joc, sub and whyus */
+
+.joc, .sub, .whyus
+{
+    padding: 40px;
+}
+
+.sub, .whyus
+{
+    color: white;
+}
+
+/* Join our community */
+
+.joc
+{
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.joc p
+{
+    color: hsl(218, 22%, 67%);
+}
+
+.joc h2
+{
+    color: hsl(71, 73%, 54%);
+}
+
+/* Subscription */
+
+.sub
+{
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(179, 62%, 43%);
+    border-bottom-left-radius: 10px;
+}
+
+.ppm
+{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 2px;
+}
+
+.price
+{
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.signup
+{
+    text-align: center;
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    padding: 15px;
+    margin-top: auto;
+    border-radius: 5px;
+    font-weight: 700;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.13);
+}
+
+/* Why Us */
+
+.whyus
+{
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(179, 51%, 50%);
+    border-bottom-right-radius: 10px;
+}
+
+ul
+{
+    font-size: 14px;
+    line-height: 1.4em;
+    color: hsl(204, 43%, 93%);
+}
+
+/* Responsive Commands */
+
+@media only screen and (max-width: 465px)
+{
+    body
+    {
+        display: block;
+    }
+
+    .attribution
+    {
+        display: none;
+    }
+
+    .overbox
+    {
+        grid-template-areas: "top"
+                             "mid"
+                             "bottom";
+        grid-template-rows: 28fr 23fr 23fr;
+        grid-template-columns: 1fr;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        min-height: 770px;
+        height: auto;
+    }
+
+    .joc
+    {
+        grid-area: top;
+    }
+
+    .sub
+    {
+        grid-area: mid;
+        border-bottom-left-radius: 0;
+    }
+
+    .whyus
+    {
+        grid-area: bottom;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .joc, .sub, .whyus
+    {
+        padding: 35px 25px;
+    }
+
+    ul
+    {
+        font-size: 13px;
+    }
+
+    h1
+    {
+        font-size: 19px;
+    }
+
+    .joc h2
+    {
+        font-size: 15px;
+    }
+
+    .joc p
+    {
+        font-size: 15px;
+    }
+}
